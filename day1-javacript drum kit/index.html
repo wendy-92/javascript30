@@ -65,8 +65,9 @@
         const keyset = keybox[0].getElementsByTagName("div");
         const audio = document.getElementsByTagName("audio");
         for(var i = 0;i<keyset.length;i++){
-          if(keycode === keyset[i].getAttribute('data-key')){
+          if(keycode.toString() === keyset[i].getAttribute('data-key')){
             audio[i].play();
+            keyset[i].style.transform();
           }
         }
 
